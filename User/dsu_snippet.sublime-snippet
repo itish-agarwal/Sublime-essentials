@@ -1,0 +1,38 @@
+<snippet>
+  <content><![CDATA[
+class dsu {
+public:
+  vector<int> p, rank;
+  dsu(int _n) {
+    p.resize(_n);
+    rank.resize(_n);
+    iota(p.begin(), p.end(), 0);
+  }
+  inline int get(int x) {
+    return (x == p[x] ? x : (p[x] = get(p[x])));
+  }
+  inline void unite(int x, int y) {
+    x = get(x);
+    y = get(y);
+    if(x!=y) {
+      if(rank[x] < rank[y]) {
+        p[x] = y;
+      } else if(rank[y] < rank[x]) {
+        p[y] = x;
+      } else {
+        p[y] = x;
+        rank[x]++;
+      }
+    }
+    return;
+  }
+  inline bool belong(int x, int y) {
+    return get(x) == get(y);
+  }
+};
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>disjoint</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>source.python</scope> -->
+</snippet>

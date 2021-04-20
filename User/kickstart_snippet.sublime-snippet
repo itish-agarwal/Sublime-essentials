@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[
+#include <bits/stdc++.h>
+
+using namespace std;
+
+void test_case() {
+  
+}
+int main() {
+  ios::sync_with_stdio(false);
+  cin.tie(0);
+  int tt;
+  cin >> tt;
+  for(int z = 1; z <= tt; z++) {
+    cout << "Case #" << z << ": ";
+    test_case();
+  }
+}
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>kickstart</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>source.python</scope> -->
+</snippet>

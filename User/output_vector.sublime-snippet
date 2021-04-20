@@ -1,0 +1,13 @@
+<snippet>
+  <content><![CDATA[
+//Usage -> vector<int> a, cout << a << '\n'
+ostream& operator << (ostream& stream, const vector<int>& v) {
+  for(auto x : v) stream << x << " ";
+  return stream;
+}
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>output_vector</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>source.python</scope> -->
+</snippet>
